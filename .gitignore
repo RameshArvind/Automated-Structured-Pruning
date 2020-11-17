@@ -5,9 +5,10 @@ __pycache__/
 .vscode/
 # C extensions
 *.so
-
+*.pt
 # Distribution / packaging
 .Python
+data/
 build/
 develop-eggs/
 dist/

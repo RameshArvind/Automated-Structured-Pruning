@@ -2,7 +2,7 @@ from training_utils import get_cifar10_dataloaders, evaluate_model, train_model
 from model_utils import get_cifar_vgg
 import torch
 
-EPOCHS = 10
+EPOCHS = 13
 
 trainloader, testloader = get_cifar10_dataloaders()
 net = get_cifar_vgg(10)

@@ -18,8 +18,8 @@ for i in trange(1000):
     net.load_state_dict(torch.load("original_trained_network.pt"))
     model_copy = get_cifar_vgg(10, pretrained=False)
     strategy = np.random.uniform(
-        0, 0.8, size=num_prunable_layers(model_copy)).tolist()
-    results_file_name = f"{str(uuid.uuid1())}.json"
+        0, 0.9, size=num_prunable_layers(model_copy)).tolist()
+    results_file_name = f"results/{str(uuid.uuid1())}.json"
     try:
         model_copy, num_pruned = prune_with_strategy(model_copy, net, strategy)
         pruned_num_parameters = sum(p.numel() for p in model_copy.parameters())
